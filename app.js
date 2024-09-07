@@ -10,7 +10,9 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://moviz-front-33rl.vercel.app/"
+}));
 
 app.use(logger('dev'));
 app.use(express.json());
