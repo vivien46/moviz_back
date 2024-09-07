@@ -11,7 +11,9 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 app.use(cors({
-  origin: "https://moviz-front-33rl.vercel.app/"
+  origin: "https://moviz-front-33rl.vercel.app",
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials:true
 }));
 
 app.use(logger('dev'));
